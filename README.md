@@ -26,7 +26,11 @@ Once you have it working in the console, write an event listener that will use t
 
 **YOUR NOTES**
 ```
+Capture h1#header in a variable soccerHeader  =>      soccerHeader = querySelector("h1#header")
 
+Replace "element" with "soccerHeader" in following function =>   element.addEventListener("click", function(){); });
+
+Add toggleColor into previous function 
 ```
 
 ## Deliverable 2: Create Player
@@ -54,5 +58,19 @@ You can decide if you'd like to use *event delegation* to handle this, or if you
 
 **YOUR NOTES**
 ```
+find likebutton class with querySelectorAll to get all the buttons. save to a variable
+
+iterate through the buttons using for each and passing the button as the params
+
+add an event listener to listen for a click of the button.
+
+narrow down on the html tree to get to the number in html  we want to increment as each button is clicked.
+
+parse that number, which is a string, to an integer so we can intcrement it.
+
+increment the parsed string, now an integer, + 1
+
+set the actual html for the amount of likes to the parsed string, or the currentLikes, + 1
+
 
 ```

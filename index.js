@@ -40,7 +40,26 @@ function toggleColor(element) {
   }
 }
 
+let soccerHeader = document.querySelector("h1#header")
+
+soccerHeader.addEventListener("click", function(){ toggleColor(document.querySelector("h1#header")); });
+
 
 /***** Deliverable 2 *****/
 
+// document.querySelector("#id-new-player-form").addEventListener("submit", function() {
+//   document.getElementById()
+
 /***** Deliverable 3 *****/
+const upVoteButtons = document.querySelectorAll(".like-button")
+
+upVoteButtons.forEach(function(button){
+  button.addEventListener("click", function(event){
+     const parentDiv = event.target.parentNode
+     const pTag = parentDiv.querySelector('p')
+
+     let currentLikes = parseInt(pTag.textContent)
+     const newLikes = currentLikes + 1
+     pTag.textContent = newLikes
+  })
+})
